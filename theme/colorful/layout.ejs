@@ -16,15 +16,14 @@
     window.onload = function(){
         var linkArray = document.querySelectorAll(".page-toc a");
         var pathname = location.pathname;
-        var origin = location.origin
-        console.log(pathname)
+        var origin = location.origin;
         linkArray.forEach(function(dom, k){
             var id = dom.href.replace(origin+pathname+"#", '');
             dom.removeAttribute("href")
             dom.setAttribute("data-to", id)
             var target = document.getElementById(id);
             dom.onclick = function(){
-                document.body.scrollTop = target.offsetTop - 80
+                document.body.scrollTop = target.offsetTop - 80;
             }
             
         })
