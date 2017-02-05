@@ -13,31 +13,44 @@ body
     background:#F6F6F6 url(../img/background.png)
 body,html
     height:100%
-    font-family:Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"
+    font-family: arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"
 .logo
     float left
     padding: 0 20px 0 0
     font-size: 24px
+    color: #35495e
+    font-family: "微软雅黑", Helvetica, arial, nimbussansl
+    font-weight: bold
     img 
         vertical-align: middle
         margin: -4px 0 0 0
 
-.nav
-    background-image: linear-gradient(to bottom,#fff 0,#f8f8f8 100%)
-    z-index: 2
-    height: 41px
-    line-height: 42px
-    border-bottom: 1px solid #C4C4C4
-    padding: 0 0 0 20px
+.nav-content
     position: fixed
     width: 100%
+    border-bottom: 1px solid #ddd
+    height: 71px
+    background:#F6F6F6 url(../img/background.png)
+    z-index: 100
+.nav
+    line-height: 70px
+    position: relative
+    width: 90%
+    margin: 0 auto
     @media mq-mobile
         height initial
         position: initial
+    a
+        text-decoration: none
+        color: inherit
+    a:link 
+        text-decoration: none
+        color: inherit
     ul  
         list-style: none
         position: relative
         display: inline-table
+        float: right
         @media mq-mobile
             display inline-flex
         ul
@@ -54,6 +67,7 @@ body,html
                     color:#fff
                     line-height:29px
                     height:29px
+                    
             li 
                 float: none
                 border-bottom: 1px solid #C8C8C8
@@ -72,22 +86,25 @@ body,html
                 top:0
         li
             float: left
+            padding-top: 15px
+            padding-bottom: 15px
             line-height: 40px
             a
                 display: block
                 color: #757575
+                font-size: 18px
                 text-decoration: none
-                padding: 0 15px
+                margin: 0 20px
         li:hover
-            background: #E1E1E1
-            background-image: linear-gradient(#CCCCCC 0%,#E7E7E7 40%)
             a
                 color: #333
+                border-bottom: 2px solid #333
         li.active
             a
-                background-image: linear-gradient(#E8E8E8 0%,#e7e7e7 100%)
-                color:#A00000
+                color:#41b883
                 height: 40px
+                border-bottom: 2px solid #41b883
+
     ul li:hover > ul
         display: block
     ul:after
@@ -95,59 +112,79 @@ body,html
         clear: both
         display: block
 .warpper
-    width: 100%
-    padding: 41px 0 0 0
+    width: 90%
+    padding: 71px 0 30px 0
     height: 100%
-    overflow: auto
+    margin: 0 auto
+    position: relative
     @media mq-mobile
         padding-top 0
-    .page-toc,.markdown-body
-        height:100%
+
     .markdown-body
         margin-left:tocwidth
-        overflow: auto
         @media mq-mobile
             margin-left:0
     .page-toc
-        width:200px
-        height:calc(100% - 41px)
+        height:calc(100% - 71px)
         position: fixed
         width:tocwidth
-        border-right: 1px solid #bbb
-        box-shadow: 0 0 20px #ccc
-        background:#fff
-        padding: 10px
+        // background:#F6F6F6 url(../img/background.png)
+        padding: 10px 0px
+        border-right: 1px solid #ddd
         overflow-y: auto
         overflow-x: hidden
-        font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif !important;
+        font-family:  Arial, sans-serif !important;
+        text-align: right
+        z-index: 1000
         @media mq-mobile
             display none
         ul
             list-style-type: none
-            margin: 0
             a 
                 display: block
-                padding: 3px 0
-                color: #151515
+                padding: 10px 0 4px 0
+                color: #000
+                font-family: "微软雅黑"
                 text-decoration: none
                 font-weight:bold
-                line-height: 16px
-                font-size: 14px
+                line-height: 22px
+                font-size: 18px
+                cursor: pointer
                 &:hover
-                    color:red
+                    color:#ff6600
                     text-decoration: underline
             li 
                 padding-left:3px
                 text-align:left
+                list-style-type: none
             ul
-                margin:0 0 0 10px
+                border-right: none
                 list-style-type: square
-                padding: 0 0 0 9px
+                padding:0px
+                line-height: 14px
                 li 
                     a 
+                        padding: 3px 0
                         font-size:90%
-                        font-weight:normal
+                        font-family: Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif
                         border-bottom:0
+                        font-size: 16px
+                        color: #41b883
+                    ul
+                        padding-left: 10px
+                        li
+                            a
+                                padding: 1px 0
+                                font-size: 14px
+                                color: #222
+                                font-weight: normal
+                             ul
+                                // display: none
+                                li
+                                    a
+                                        color: #777
+                                        font-size: 13px
+
     .copyright
         border-top: 1px dashed #E9E9E9
         padding: 6px 0 5px 2px

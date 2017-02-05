@@ -6,3 +6,4 @@ examples/
 *.swn
 idoc-theme-*/
 .idea/
+.vscode/

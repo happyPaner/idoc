@@ -1,9 +1,10 @@
 .markdown-body
-    padding: 30px 35px 30px 35px
+    padding: 30px 20px 30px 80px
+    height: auto
     word-wrap: break-word
-    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif
-    font-size: 16px
-    line-height: 1.4em
+    font-family:"Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif
+    font-size: 14px
+    line-height: 1.8em
     color:#333
     @media mq-mobile
         padding: 30px 10px 30px 10px
@@ -24,14 +25,16 @@
         margin-bottom: 16px
         font-weight: bold
         line-height: 1.4
+        font-family: "微软雅黑"
         a 
-            display:none
-        &:hover a
-            display:inline
-            color:#000
+            color: #41b883
             font-size:85%
+            display:inline
+            position: absolute
+            left: -20px
+            top: 7%
     h1,h2
-        border-bottom: 1px solid #eee
+        border-bottom: 1px solid #ccc
     h1
         font-size: 2.25em
         line-height: 1.2
@@ -40,12 +43,24 @@
         padding-bottom: 0.3em
         font-size: 1.75em
         line-height: 1.225
-        border-bottom:1px dashed #DEDEDE
+        border-bottom:1px dashed #aaa
+        color: #35495e
+    h3
+        padding-bottom: 0.2em
+        font-size: 1.3em
+        line-height: 1.225
+        color: #333333
+    h4
+        padding-bottom: 0.2em
+        font-size: 1.1em
+        line-height: 1.225
+        color: #333333
     blockquote
-        padding: 0 15px
-        color: #777
-        border-left: 4px solid #ddd
+        padding: 3px 15px
+        color: #666
+        border-left: 4px solid #41b883
         margin: 0;
+        // background: #eee
         &>:last-child
             margin-bottom: 0
         &>:first-child
@@ -70,6 +85,7 @@
         word-break: break-all
         word-wrap: break-word 
         font: 16px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        color: #234134
         code
             // letter-spacing: 1px
             background-color:transparent
